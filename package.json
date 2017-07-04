@@ -18,8 +18,10 @@
   "homepage": "https://github.com/HypeSquad-Event-App/App#readme",
   "dependencies": {
     "aws-sdk": "^2.80.0",
+    "koa": "^2.3.0",
     "koa-route": "^3.2.0",
+    "koa-session": "^5.4.0",
     "koa-static": "^4.0.0",
-    "koajs": "^1.0.0"
+    "koa-userauth": "^1.4.0"
   }
 }
