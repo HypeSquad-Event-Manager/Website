@@ -1,0 +1,25 @@
+{
+  "name": "hypelistapp",
+  "version": "1.0.0",
+  "description": "Backend and server for HyperSquad Event List",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HypeSquad-Event-App/App.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/HypeSquad-Event-App/App/issues"
+  },
+  "homepage": "https://github.com/HypeSquad-Event-App/App#readme",
+  "dependencies": {
+    "aws-sdk": "^2.80.0",
+    "koa-route": "^3.2.0",
+    "koa-static": "^4.0.0",
+    "koajs": "^1.0.0"
+  }
+}
