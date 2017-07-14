@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #map {
+            height: 1000px;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+</head>
+
+<body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+    var countryOfTheUser = {lat: 42.00, lng: 2.00}; //France here
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 5,
+                center: countryOfTheUser
+            });
+
+
+            httpGetAsync("/map/list", function(result) {
+                var list = JSON.parse(result);
+                list.forEach(function(event) {
+                    var contentString = event.name;
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+                    var marker = new google.maps.Marker({
+                        position: event.location,
+                        map: map,
+                        title: event.name
+                    });
+                    marker.addListener('click', function() {
+                        infowindow.open(map, marker);
+                    });
+                });
+            });
+
+        }
+
+        function httpGetAsync(theUrl, callback) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    callback(xmlHttp.responseText);
+            }
+            xmlHttp.open("GET", theUrl, true); // true for asynchronous
+            xmlHttp.send(null);
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr9v7uj0wnZMszBkshJx90E1Afjixm0AQ&callback=initMap">
+    </script>
+</body>
+
+</html>
