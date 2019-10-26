@@ -1,29 +1,29 @@
 {
-    "name": "hypelistapp",
-    "version": "1.0.0",
-    "description": "Backend and server for HyperSquad Event List",
-    "main": "index.js",
+    "private": true,
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/HypeSquad-Event-App/App.git"
+    "devDependencies": {
+        "axios": "^0.19",
+        "bootstrap": "^4.0.0",
+        "cross-env": "^5.1",
+        "jquery": "^3.2",
+        "laravel-mix": "^4.0.7",
+        "lodash": "^4.17.13",
+        "popper.js": "^1.12",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.20.1",
+        "sass-loader": "7.*",
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.10"
     },
-    "author": "",
-    "license": "GPL-3.0",
-    "bugs": {
-        "url": "https://github.com/HypeSquad-Event-App/App/issues"
-    },
-    "homepage": "https://github.com/HypeSquad-Event-App/App#readme",
     "dependencies": {
-        "aws-sdk": "^2.80.0",
-        "koa": "^2.3.0",
-        "koa-route": "^3.2.0",
-        "koa-session": "^5.4.0",
-        "koa-static": "^4.0.0",
-        "koa-userauth": "^1.4.0",
-        "request": "^2.81.0",
-        "request-promise-native": "^1.0.4"
+        "bulma": "^0.8.0"
     }
 }
