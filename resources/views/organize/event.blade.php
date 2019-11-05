@@ -57,7 +57,7 @@
                             <span class="icon">
                                 <i class="fas fa-check-circle fa-fw"></i>
                             </span>
-                            <span>Add Guideline</span>
+                            <span>Add Event</span>
                         </button>
                     </div>
 
