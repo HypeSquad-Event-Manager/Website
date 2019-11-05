@@ -4,8 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65b0e0b0617b899201286ae60bf1ff27",
+    "content-hash": "059297fe6d14a31aca535dcae46d693a",
     "packages": [
+        {
+            "name": "cornford/googlmapper",
+            "version": "v2.35.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bradcornford/Googlmapper.git",
+                "reference": "3d180bfed327e5d218fc09ca3da5d561e6fbf30a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bradcornford/Googlmapper/zipball/3d180bfed327e5d218fc09ca3da5d561e6fbf30a",
+                "reference": "3d180bfed327e5d218fc09ca3da5d561e6fbf30a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.0 || ^6.0",
+                "illuminate/view": "^5.0 || ^6.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.1",
+                "phpspec/phpspec": "2.0.*@dev"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Cornford\\Googlmapper\\MapperServiceProvider"
+                    ],
+                    "aliases": {
+                        "Mapper": "Cornford\\Googlmapper\\Facades\\MapperFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Cornford\\Googlmapper": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bradley Cornford",
+                    "email": "me@bradleycornford.co.uk"
+                }
+            ],
+            "description": "An easy way to integrate Google Maps with Laravel.",
+            "keywords": [
+                "google",
+                "laravel",
+                "map",
+                "mapping",
+                "maps",
+                "streetview"
+            ],
+            "time": "2019-10-16T09:40:11+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",

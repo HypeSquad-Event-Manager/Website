@@ -18,22 +18,22 @@
                 <p class="subtitle">
                     <strong>View</strong> and <strong>create</strong> your events with us
                 </p>
-                <br />
-                <button class="button is-large is-white has-text-primary" href="{{ Route('login') }}">Login with Discord</button>
-
-
-
-
+                @auth
+                @else
+                    <a href="{{ route('login')  }}">
+                        <button class="button is-large is-white has-text-primary">Login with Discord</button>
+                    </a>
+                @endauth
             </div>
+
         </div>
         <div class="container has-text-centered">
-            <a class="subtitle is-4 is-spaced" href="{{ Route('login') }}">Learn More</a>
+            <a class="subtitle is-4 is-spaced" href="{{ route('info') }}">Learn More</a>
         </div>
     </section>
 
-
-
 @endsection
+{{-- Make css when not tired xD --}}
 <style>
     .is-horizontal-center {
         justify-content: center;

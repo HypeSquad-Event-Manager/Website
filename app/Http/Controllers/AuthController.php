@@ -1,11 +1,13 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
-use App\User;
 use Socialite;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 
 class AuthController extends Controller
 {

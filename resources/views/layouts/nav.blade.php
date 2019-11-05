@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('home') }}">
-                <img src='{{ asset('img/Discord_Logo.png') }}' height="100px">
+                <img src='{{ asset('img/Discord_Logo.png') }}'>
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -14,6 +14,8 @@
         </div>
 
         <div id="events" class="navbar-menu">
+
+            <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a>
 
             <div class="navbar-end">
                 @auth
@@ -37,7 +39,6 @@
                     </a>
                 @endif
             </div>
-
         </div>
     </div>
 </nav>

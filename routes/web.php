@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'GuestController@index')->name('home');
+Route::get('/information', 'GuestController@info')->name('info');
 
 
 Route::prefix('auth')->group(function () {
@@ -20,11 +21,13 @@ Route::prefix('auth')->group(function () {
     Route::get('logout', 'AuthController@handleLogout')->name('logout');
 });
 
+// Route::get('/map', 'HomeController@map');
 
+Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
-
-
-
-
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::prefix('organize')->group(function () {
+   Route::prefix('new')->group(function () {
+       Route::get('/event', 'HomeController@event')->name('new_event');
+       Route::post('/event', 'HomeController@postevent');
+   });
+});
