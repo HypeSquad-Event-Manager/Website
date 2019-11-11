@@ -21,7 +21,7 @@ Route::prefix('auth')->group(function () {
     Route::get('logout', 'AuthController@handleLogout')->name('logout');
 });
 
-// Route::get('/map', 'HomeController@map');
+Route::get('/map', 'HomeController@map');
 
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
@@ -31,3 +31,5 @@ Route::prefix('organize')->group(function () {
        Route::post('/event', 'HomeController@postevent');
    });
 });
+
+// Route::prefix('user', 'HomeController@profile')

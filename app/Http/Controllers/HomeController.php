@@ -27,6 +27,8 @@ class HomeController extends Controller
 
     public function event() { return view('organize.event'); }
 
+    public function map() { return view('map.index'); }
+
     public function postevent (Request $request) {
         $validatedData = $request->validate([
             'title' => 'max:180|nullable',

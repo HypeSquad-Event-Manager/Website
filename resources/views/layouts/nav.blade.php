@@ -16,9 +16,11 @@
         <div id="events" class="navbar-menu">
 
             <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a>
+            <a class="navbar-item" href="{{ route('new_event') }}">Event manager</a>
 
             <div class="navbar-end">
                 @auth
+
                     <div class="navbar-item has-dropdown is-hoverable">
                         <div class="navbar-link has-icon">
                             <span class="icon"><i class="fab fa-discord fa-fw"></i></span>
@@ -32,7 +34,6 @@
                             </a>
                         </div>
                     </div>
-
                 @else
                     <a class="navbar-item" href="{{ route('login') }}">
                         <img src="{{ asset('img/language.png') }}" height="28">
