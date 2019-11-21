@@ -17,7 +17,9 @@ class Events extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('date');
-            $table->string('location');
+            $table->string('lat');
+            $table->string('lon');
+            $table->string('address');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class Events extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_events');
+        Schema::dropIfExists('events');
     }
 }

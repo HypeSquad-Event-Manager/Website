@@ -17,6 +17,7 @@
 
             <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a>
             <a class="navbar-item" href="{{ route('new_event') }}">Event manager</a>
+            <a class="navbar-item" href="{{ route('map') }}">Map</a>
 
             <div class="navbar-end">
                 @auth

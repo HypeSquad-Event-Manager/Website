@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Events;
+use app\User_events;
 
 class HomeController extends Controller
 {
@@ -29,19 +30,52 @@ class HomeController extends Controller
 
     public function map() { return view('map.index'); }
 
+    public function success() { return view('status.success'); }
+
+    public function error() { return view('status.error'); }
+
+    public function profile() { return view('user.profile.index'); }
+
+    public function rsvp() { return view('user.rsvp.index'); }
+
+    public function postrsvp (Request $request) {
+        $validatedData = $request->validate([
+            'title' => 'max:180|nullable',
+            'date' => 'required',
+            'lat' => 'nullable',
+            'lon' => 'nullable',
+            'address' => 'nullable',
+            'rsvp' => 'nullable'
+        ]);
+
+        $gl = User_events::create([
+            'title' => $request->title,
+            'date' => $request->date,
+            'lat' => $request->lat,
+            'lon' => $request->lon,
+            'address' => $request->address,
+            'rsvp' => $request->rsvp
+        ]);
+    }
+
     public function postevent (Request $request) {
         $validatedData = $request->validate([
             'title' => 'max:180|nullable',
             'date' => 'required',
-            'location' => 'nullable',
+            'lat' => 'nullable',
+            'lon' => 'nullable',
+            'address' => 'nullable',
         ]);
 
         $gl = Events::create([
             'title' => $request->title,
             'date' => $request->date,
-            'location' => $request->location,
+            'lat' => $request->lat,
+            'lon' => $request->lon,
+            'address' => $request->address,
         ]);
-        return redirect("/");
+        return redirect("/success");
     }
+
 
 }

@@ -1,3 +1,6 @@
+@php 
+use App\Events;
+@endphp
 @section('title', 'Information')
 @section('content')
     @extends('layouts.base')
@@ -14,14 +17,41 @@
         </div>
 
         <div class="split right">
-            <div class="centered">
-                <h2>Map Here</h2>
-            </div>
+                <div id="map"></div>
     </section>
+      <script>
+
+var center = [0,0];
+
+var map = L.map('map').setView(center, 3);
+L.tileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 30
+  }).addTo(map);
+
+// var me = L.marker([position.coords.latitude, position.coords.longitude]).addTo(map);
+
+// me.bindPopup("<b>You are here</b>").openPopup();
+
+@foreach (Events::all() as $event)
+var marker = L.marker([{{ $event->lat }}, {{ $event->lon }}]).addTo(map);
+
+marker.bindPopup("<b>{{ $event->title }} (#{{ $event->id }})</b><br>Event date: {{ $event->date }}<br /><br />{{ $event->address }}", {autoClose: false})
+@endforeach
+    // });
+        // } else {
+            // alert("Sorry, your browser does not support HTML5 geolocation.");
+        // }
+  </script>
 
 @endsection
 {{-- Create css file when not tired xD --}}
 <style>
+        #map { 
+            padding-top: 10%;
+            height: 900px;
+             }
+
     .split {
         height: 100%;
         width: 50%;

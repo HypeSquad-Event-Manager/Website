@@ -17,8 +17,10 @@ class UserEvents extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('date');
-            $table->string('location');
-            $table->string('rsvp');
+            $table->string('lat');
+            $table->string('lon');
+            $table->string('address');
+            $table->string('rsvp')->default('no');
             $table->timestamps();
         });
     }

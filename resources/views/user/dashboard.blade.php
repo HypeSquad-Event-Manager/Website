@@ -1,3 +1,7 @@
+@php
+    use App\Events;
+@endphp
+
 @section('title', 'Dashboard')
 @section('content')
     @extends('layouts.base')
@@ -23,15 +27,23 @@
                                             <th>Location</th>
                                             <th>RSVP</th>
                                         </tr>
-{{--                                        Form    --}}
-                                        <td>Test</td>
-                                        <td>Test</td>
-                                        <td>Test</td>
-                                        <td>Test</td>
-
+                                        @foreach (Events::all() as $event)
+                                        <tr>
+                                        <td>{{ $event->title }}</td>
+                                        <td>{{ $event->date }}</td>
+                                        <td>{{ $event->address }}</td>
+                                        <td><div class="select">
+                                            <select>
+                                              <option>No</option>
+                                              <option>Yes</option>
+                                            </select>
+                                          </div></td>
+                                        </tr>
+                                             @endforeach
 
                                         </thead>
                                     </table>
+
                                 </div>
                             </div>
                         </div>

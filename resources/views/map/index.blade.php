@@ -14,7 +14,15 @@
             <div id="map"></div>
     </section>
   <script>
-var center = [0, 0];
+
+
+navigator.geolocation.getCurrentPosition(function(position) {
+    var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+    console.log(positionInfo)
+});
+
+var center = [0,0];
+
 var map = L.map('map').setView(center, 3);
 L.tileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -22,9 +30,9 @@ L.tileLayer(
   }).addTo(map);
 
 @foreach (Events::all() as $event)
-var marker = L.marker([{{ $event->location }}]).addTo(map);
+var marker = L.marker([{{ $event->lat }}, {{ $event->lon }}]).addTo(map);
 
-marker.bindPopup("<b>{{ $event->title }} (#{{ $event->id }})</b><br>This is the location you need on {{ $event->date }}", {autoClose: false}).openPopup();
+marker.bindPopup("<b>{{ $event->title }} (#{{ $event->id }})</b><br>Event date: {{ $event->date }}<br /><br />{{ $event->address }}", {autoClose: false})
 @endforeach
   </script>
 

@@ -21,7 +21,7 @@ Route::prefix('auth')->group(function () {
     Route::get('logout', 'AuthController@handleLogout')->name('logout');
 });
 
-Route::get('/map', 'HomeController@map');
+Route::get('/map', 'HomeController@map')->name('map');
 
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
@@ -32,4 +32,15 @@ Route::prefix('organize')->group(function () {
    });
 });
 
-// Route::prefix('user', 'HomeController@profile')
+Route::get('/success', 'HomeController@success')->name('success');
+
+Route::get('/error', 'HomeController@error')->name('error');
+
+Route::prefix('user')->group(function () {
+	Route::get('/profile', 'HomeController@profile')->name('profile');
+});
+
+Route::prefix('invitation')->group( function () {
+    Route::get('rsvp', 'HomeController@rsvp')->name('rsvp');
+    Route::post('rsvp', 'HomeController@postrsvp');
+});
