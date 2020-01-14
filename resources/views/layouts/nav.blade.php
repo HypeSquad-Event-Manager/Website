@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('home') }}">
-                <img src='{{ asset('img/blurple_map.png') }}'>
+                <img src='{{ asset('img/discord_logo.png') }}'>
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
