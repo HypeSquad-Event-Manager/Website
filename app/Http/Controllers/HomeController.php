@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Events;
 use app\User_events;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -38,24 +39,24 @@ class HomeController extends Controller
 
     public function rsvp() { return view('user.rsvp.index'); }
 
-    public function postrsvp (Request $request) {
+    public function user_events (Request $request) {
         $validatedData = $request->validate([
-            'title' => 'max:180|nullable',
-            'date' => 'required',
-            'lat' => 'nullable',
-            'lon' => 'nullable',
-            'address' => 'nullable',
-            'rsvp' => 'nullable'
+            'name' => 'max:180|nullable',
+            'username' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'rsvp' => 'required'
+
         ]);
 
         $gl = User_events::create([
-            'title' => $request->title,
-            'date' => $request->date,
-            'lat' => $request->lat,
-            'lon' => $request->lon,
+            'name' => $request->name,
+            'username' => $request->username,
+            'email' => $request->email,
             'address' => $request->address,
             'rsvp' => $request->rsvp
         ]);
+            return redirect('/');
     }
 
     public function postevent (Request $request) {
@@ -65,6 +66,7 @@ class HomeController extends Controller
             'lat' => 'nullable',
             'lon' => 'nullable',
             'address' => 'nullable',
+            'creator' => 'nullable'
         ]);
 
         $gl = Events::create([
@@ -73,6 +75,7 @@ class HomeController extends Controller
             'lat' => $request->lat,
             'lon' => $request->lon,
             'address' => $request->address,
+            'creator' => Auth::user()->username
         ]);
         return redirect("/success");
     }

@@ -15,16 +15,14 @@ class UserEvents extends Migration
     {
         Schema::create('user_events', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('date');
-            $table->string('lat');
-            $table->string('lon');
+            $table->string('name');
+            $table->string('username');
+            $table->string('email');
             $table->string('address');
-            $table->string('rsvp')->default('no');
+            $table->string('rsvp');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

@@ -40,7 +40,12 @@ Route::prefix('user')->group(function () {
 	Route::get('/profile', 'HomeController@profile')->name('profile');
 });
 
-Route::prefix('invitation')->group( function () {
-    Route::get('rsvp', 'HomeController@rsvp')->name('rsvp');
-    Route::post('rsvp', 'HomeController@postrsvp');
+// Route::prefix('invitation')->group( function () {
+//     Route::get('rsvp', 'HomeController@rsvp')->name('rsvp');
+//     Route::post('rsvp', 'HomeController@postrsvp');
+// });
+
+Route::prefix('rsvp')->group( function () {
+    Route::get('accept', 'HomeController@rsvp')->name('rsvp');
+    Route::post('accept', 'HomeController@user_events');
 });
