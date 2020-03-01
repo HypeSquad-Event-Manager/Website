@@ -28,27 +28,23 @@
                 @if ($user->userid == '141218912934166528') <span class="tag is-danger"><i class="fas fa-file-code"></i>&nbsp;Project Manager</span> @endif
                 <br />
               </p>
-              <div class="column is-one-third">
-                <p><strong><i class="fas fa-info-circle"></i>&nbsp;Description:&nbsp;</strong> {{ $user->description }}
-                </div></p>
-                <div class="column is-one-third">
+              <div class="column is-12">
+                    <p><strong><i class="fas fa-info-circle"></i>&nbsp;Description:&nbsp;</strong> {{ $user->description }}</p>
+              </div>
+              <div class="column is-12">
                     <p><strong><i class="fas fa-envelope-square"></i>&nbsp;Email:&nbsp;</strong> {{ $user->email }}</p>
-                </div>
-                <div class="column is-one-third">
-                <p><strong><i class="far fa-calendar-times"></i>&nbsp;Date of Birth:&nbsp;</strong> {{ $user->dob }}</p>
-                </div>
-                <div class="column is-one-third">
+              </div>
+                    <p><strong><i class="far fa-calendar-times"></i>&nbsp;Date of Birth:&nbsp;</strong> {{ $user->dob }}</p>
+                    <div class="column is-12">
                     <p><strong><i class="far fa-user"></i>&nbsp;Gender:&nbsp;</strong> {{ $user->gender }}</p>
-                </div>
-                <div class="column is-one-third">
+                    </div>
                     <p><strong><i class="far fa-user"></i>&nbsp;Occupation:&nbsp;</strong> {{ $user->occupation }}</p>
-                </div>
-                <div class="column is-one-third">
+                    <div class="column is-12">
                     <p><strong><i class="far fa-user"></i>&nbsp;Created At:&nbsp;</strong> {{ $user->created_at }}</p>
-                </div>
-                <div class="column is-one-third">
+                    </div>
+                    <div class="column is-12">
                     <p><strong><i class="far fa-user"></i>&nbsp;Updated At:&nbsp;</strong> {{ $user->updated_at }}</p>
-                </div>
+                    </div>
               </div>
         </div>
         </article>
