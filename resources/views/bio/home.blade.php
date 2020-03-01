@@ -6,9 +6,11 @@
     @extends('layouts.base')
 <section class="hero is-medium is-primary">
     <div class="hero-head">@include ('layouts.nav')</div>
-    @foreach (User_Bios::all() as $user)
-        <div class="container" style="padding: 10px;">
+    <div class="columns is-centered">
 
+    @foreach (User_Bios::all() as $user)
+        <div class="column is-5">
+        <div class="container" style="padding: 10px;">
     <div class="box is-fullheight">
         <article class="media">
           <div class="media-left">
@@ -26,8 +28,6 @@
                 @if ($user->userid == '141218912934166528') <span class="tag is-danger"><i class="fas fa-file-code"></i>&nbsp;Project Manager</span> @endif
                 <br />
               </p>
-              <div class="columns is-multiline is-centered">
-
               <div class="column is-one-third">
                 <p><strong><i class="fas fa-info-circle"></i>&nbsp;Description:&nbsp;</strong> {{ $user->description }}
                 </div></p>
@@ -49,17 +49,14 @@
                 <div class="column is-one-third">
                     <p><strong><i class="far fa-user"></i>&nbsp;Updated At:&nbsp;</strong> {{ $user->updated_at }}</p>
                 </div>
-
               </div>
-
-
-            </div>
         </div>
         </article>
       </div>
     </div>
-
+</div>
       @endforeach
+    </div>
 
 
 </section>

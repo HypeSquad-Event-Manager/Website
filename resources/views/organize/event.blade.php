@@ -68,7 +68,7 @@ map.on('click', function(e) {
     });
 });
 </script>
-            
+
                     <input class="is-invisible {{ $errors->has('lat') ? 'is-danger' : '' }}" type="text" id="lat" name="lat" placeholder="Event Information"></input>
 
                     <input class="is-invisible {{ $errors->has('lon') ? 'is-danger' : '' }}" type="text" id="lon" name="lon" placeholder="Event Information"></input>
