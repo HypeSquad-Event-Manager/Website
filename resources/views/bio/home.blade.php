@@ -13,7 +13,7 @@
         <article class="media">
           <div class="media-left">
             <figure class="image is-64x64">
-                <img src="{{ $user->avatar }}" alt="Image">
+                <img class="is-rounded" src="{{ $user->avatar }}" alt="Image">
             </figure>
           </div>
           <div class="media-content">
