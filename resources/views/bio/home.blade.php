@@ -22,6 +22,7 @@
                 <strong>{{ $user->username }}</strong><small>#{{ $user->discrim }}</small>
                 <br />
                 <span class="tag is-primary"><i class="fas fa-clock"></i>&nbsp;{{ $user->status }}</span> @if ($user->userid == '390179632911089666') <span class="tag is-danger"><i class="fas fa-file-code"></i>&nbsp;Lead Developer</span> @endif
+                @if ($user->userid == '98093345506615296') <span class="tag is-danger"><i class="fas fa-tasks"></i></i>&nbsp;Project Leader</span> @endif
                 <br />
               </p>
               <div class="columns is-multiline is-centered">
