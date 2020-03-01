@@ -25,6 +25,7 @@
                                             <th>Title</th>
                                             <th>Date</th>
                                             <th>Location</th>
+                                            <th>Created By</th>
                                             <th>RSVP</th>
                                         </tr>
                                         @foreach (Events::all() as $event)
@@ -32,6 +33,7 @@
                                         <td>{{ $event->title }}</td>
                                         <td>{{ $event->date }}</td>
                                         <td>{{ $event->address }}</td>
+                                        <td>{{ $event->creator }}</td>
                                         <td><div class="select">
                                             <select>
                                               <option>No</option>
