@@ -32,6 +32,14 @@ Route::prefix('organize')->group(function () {
    });
 });
 
+Route::prefix('bio')->group(function () {
+	Route::get('/', function(App\User $user){
+        return view('bio.home', compact('user'));
+    })->name('bio');
+    Route::get('/edit', 'BioController@edit')->middleware('auth');
+    Route::post('/edit', 'BioController@postBio', function(App\User $user, $edit = App\User) {} );
+});
+
 Route::get('/success', 'HomeController@success')->name('success');
 
 Route::get('/error', 'HomeController@error')->name('error');

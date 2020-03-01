@@ -21,6 +21,7 @@
    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
    crossorigin=""></script>
     {{-- <script src="{{ asset('js/leaflet.js') }}"></script> --}}
+    <script src="https://kit.fontawesome.com/b11bbfe775.js" crossorigin="anonymous"></script>
 
        @yield('js')
 </head>

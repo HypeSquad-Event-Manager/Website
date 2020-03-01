@@ -32,5 +32,8 @@ class User extends Authenticatable
     {
         return "{$this->username}#{$this->discrim}";
     }
-
+    public function getRouteKeyName()
+    {
+        return 'username';
+    }
 }
