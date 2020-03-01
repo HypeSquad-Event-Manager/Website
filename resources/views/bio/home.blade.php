@@ -10,7 +10,7 @@
     @foreach (User_Bios::all() as $user)
         <div class="column is-5">
         <div class="container" style="padding: 10px;">
-    <div class="box" style="height: 400px;">
+    <div class="box" style="height: 400px;overflow-y;">
         <article class="media">
           <div class="media-left">
             <figure class="image is-64x64">
