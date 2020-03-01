@@ -14,11 +14,11 @@
         </div>
         <div id="events" class="navbar-menu">
             <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a>
-            @auth
-            @if (roleCheck())
+            {{-- @auth
+            @if (roleCheck()) --}}
             <a class="navbar-item" href="{{ route('new_event') }}">Event manager</a>
-            @endif
-            @endauth
+            {{-- @endif
+            @endauth --}}
             <a class="navbar-item" href="{{ route('map') }}">Map</a>
             <a class="navbar-item" href="{{ route('bio') }}">Bios</a>
             <div class="navbar-end">

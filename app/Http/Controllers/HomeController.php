@@ -28,9 +28,9 @@ class HomeController extends Controller
     public function dashboard() { return view('user.dashboard'); }
 
          public function event() {
-               if (roleCheck()) {
+            //    if (roleCheck()) {
                     return view('organize.event');
-                }
+                // }
            }
 
     public function map() { return view('map.index'); }
