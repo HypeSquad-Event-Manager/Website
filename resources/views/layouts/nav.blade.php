@@ -16,7 +16,7 @@
             <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a>
             {{-- @auth
             @if (roleCheck()) --}}
-            <a class="navbar-item" href="{{ route('new_event') }}">Event manager</a>
+            <a class="navbar-item" href="{{ route('new_event') }}">Event Manager</a>
             {{-- @endif
             @endauth --}}
             <a class="navbar-item" href="{{ route('map') }}">Map</a>
