@@ -6,8 +6,8 @@
     @extends('layouts.base')
 <section class="hero is-medium is-primary">
     <div class="hero-head">@include ('layouts.nav')</div>
-    <div class="columns is-centered is-mutiline" style="
-    overflow-y : scroll;">
+    <div class="columns is-mutiline" style="
+    overflow-y : scroll">
     @foreach (User_Bios::all() as $user)
     <div class="column is-5">
       <div class="container" style="padding: 10px;">
