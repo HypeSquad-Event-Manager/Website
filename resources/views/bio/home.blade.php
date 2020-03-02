@@ -36,6 +36,8 @@
                     <p><strong><i class="far fa-user"></i>&nbsp;Occupation:&nbsp;</strong> {{ $user->occupation }}</p>
                     <p><strong><i class="far fa-user"></i>&nbsp;Created At:&nbsp;</strong> {{ $user->created_at }}</p>
                     <p><strong><i class="far fa-user"></i>&nbsp;Updated At:&nbsp;</strong> {{ $user->updated_at }}</p>
+                    <p><strong><i class="far fa-user"></i>&nbsp;Slug:&nbsp;</strong> {{ $user->slug }}</p>
+
               </div>
         </div>
         </article>

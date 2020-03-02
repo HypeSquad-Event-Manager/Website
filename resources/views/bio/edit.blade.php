@@ -52,6 +52,10 @@
                     <input class="input {{ $errors->has('sexuality') ? 'is-danger' : '' }}" type="text" name="sexuality" placeholder="Please enter your sexuality"> @if ($errors->has('sexuality'))
                     <p class="help has-text-danger">{{ $errors->first('sexuality') }}</p>@endif
                 </div>
+                <div class="column is-one-third">
+                    <input class="input {{ $errors->has('slug') ? 'is-danger' : '' }}" type="text" name="slug" placeholder="Please enter the slug you desire"> @if ($errors->has('slug'))
+                    <p class="help has-text-danger">{{ $errors->first('slug') }}</p>@endif
+                </div>
 
 
               </div>

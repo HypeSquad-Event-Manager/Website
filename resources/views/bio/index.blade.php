@@ -7,6 +7,7 @@
 <section class="hero is-medium is-primary">
     <div class="hero-head">@include ('layouts.nav')</div>
     @foreach (User_Bios::all() as $user)
+    <a href="#{{ $user->slug }}">
         <div class="container" style="padding: 10px;">
 
     <div class="box is-fullheight">
@@ -56,7 +57,7 @@
         </article>
       </div>
     </div>
-
+    </a>
       @endforeach
 
 

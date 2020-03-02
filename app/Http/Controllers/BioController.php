@@ -29,6 +29,7 @@ class BioController extends Controller
             'username' => Auth::user()->username,
             'discrim' => Auth::user()->discrim,
             'avatar' => Auth::user()->avatar,
+            'slug' => $request->slug,
             'sexuality' => $request->sexuality,
             'dob' => $request->dob,
             'description' => $request->description,

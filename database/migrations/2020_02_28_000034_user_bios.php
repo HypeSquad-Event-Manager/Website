@@ -19,6 +19,7 @@ class UserBios extends Migration
             $table->string('username');
             $table->string('discrim');
             $table->string('avatar');
+            $table->string('slug');
             $table->string('sexuality');
             $table->string('dob');
             $table->string('description');
