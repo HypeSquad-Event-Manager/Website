@@ -23,7 +23,7 @@ Route::prefix('auth')->group(function () {
 
 Route::get('/map', 'HomeController@map')->name('map');
 
-Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
+Route::get('/dashboard', 'GuestController@dashboard')->name('dashboard');
 
 Route::prefix('organize')->group(function () {
    Route::prefix('new')->group(function () {

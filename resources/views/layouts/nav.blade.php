@@ -48,7 +48,7 @@
                     </div>
                 @else
                     <a class="navbar-item" href="{{ route('login') }}">
-                        <img src="{{ asset('img/language.png') }}" height="28">
+                        <p><i class="fas fa-sign-in-alt"></i>&nbsp;Login</p>
                     </a>
                 @endif
             </div>
