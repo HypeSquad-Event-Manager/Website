@@ -31,7 +31,7 @@
             <a class="subtitle is-4 is-spaced" href="{{ route('info') }}">Learn More</a>
         </div>
     </section>
-        <img style="bottom: -20px; position: absolute; " src="{{ asset('img/bg.svg') }}" alt="">
+        <img style="bottom: -20px; position: absolute; " src="{{ asset('img/sadwd.svg') }}" alt="">
 
 @endsection
 {{-- Make css when not tired xD --}}

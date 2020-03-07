@@ -9,7 +9,7 @@
     <div class="columns is-centered is-multiline">
 
     @foreach (User_Bios::all() as $user)
-        <div class="column is-5">
+        <div class="column is-5" style="z-index: 1">
         <div class="container" style="padding: 10px;">
     <div class="box is-fullheight">
         <article class="media">
@@ -46,6 +46,7 @@
 </div>
       @endforeach
     </div>
+    <img style="bottom: -20px; position: absolute; " src="{{ asset('img/sadwd.svg') }}" alt="">
 
 
 </section>
