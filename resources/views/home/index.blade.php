@@ -6,7 +6,7 @@
         <div class="hero-head">@include ('layouts.nav')</div>
 
 
-        <div class="hero-body">
+        <div class="hero-body" style="z-index: 10;">
             <div class="container has-text-centered is-center">
 
                     <img src="{{ asset('img/blurple_map.png') }}" class="is-horizontal-center" alt="Discord map">
@@ -27,10 +27,11 @@
             </div>
 
         </div>
-        <div class="container has-text-centered">
+        <div class="container has-text-centered" style="z-index: 10;" >
             <a class="subtitle is-4 is-spaced" href="{{ route('info') }}">Learn More</a>
         </div>
     </section>
+        <img style="bottom: -20px; position: absolute; " src="{{ asset('img/bg.svg') }}" alt="">
 
 @endsection
 {{-- Make css when not tired xD --}}

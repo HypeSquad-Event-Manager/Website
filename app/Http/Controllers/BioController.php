@@ -10,8 +10,6 @@ class BioController extends Controller
 {
     public function edit() { return view('bio.edit')->with('userid', Auth::user()->userid); }
 
-
-
     public function postBio (Request $request) {
         $validatedData = $request->validate([
             'sexuality' => 'required',

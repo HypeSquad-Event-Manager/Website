@@ -12,7 +12,6 @@ use App\Events;
     <form action="{{ url('/organize/new/event') }}" method="post">
         @csrf
         <form action="/organize/new/event">
-
             <label class="label">Event Information</label>
             <div class="field is-grouped">
                 <div class="control is-expanded">
@@ -47,6 +46,7 @@ map.on('click', function(e) {
     }).then(data => {
         // console.log(data)
         document.getElementById('address').value = data['display_name'];
+        // console.log(data);
 
         var markersecond = L.marker([lat, lon]).addTo(map);
 
@@ -69,12 +69,11 @@ map.on('click', function(e) {
 });
 </script>
 
-                    <input class="is-invisible {{ $errors->has('lat') ? 'is-danger' : '' }}" type="text" id="lat" name="lat" placeholder="Event Information"></input>
+                    <input class="is-disabled" {{ $errors->has('lat') ? 'is-danger' : '' }}" type="text" id="lat" name="lat" placeholder="Event Information"></input>
 
-                    <input class="is-invisible {{ $errors->has('lon') ? 'is-danger' : '' }}" type="text" id="lon" name="lon" placeholder="Event Information"></input>
+                    <input class="is-disabled" {{ $errors->has('lon') ? 'is-danger' : '' }}" type="text" id="lon" name="lon" placeholder="Event Information"></input>
 
-
-                    <input class="is-invisible {{ $errors->has('address') ? 'is-danger' : '' }}" type="text" id="address" name="address" placeholder="Event Information"></input>
+                    <input class="is-disabled" {{ $errors->has('address') ? 'is-danger' : '' }}" type="text" id="address" name="address" placeholder="Event Information"></input>
                 </div>
             </div>
 

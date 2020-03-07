@@ -4,7 +4,7 @@
 @section('title', 'Bio')
 @section('content')
     @extends('layouts.base')
-<section class="hero is-medium is-primary">
+<section class="hero is-medium is-primary bg">
     <div class="hero-head">@include ('layouts.nav')</div>
     @foreach (User_Bios::all() as $user)
     <a href="#{{ $user->slug }}">
@@ -60,8 +60,17 @@
     </a>
       @endforeach
 
-
 </section>
 
 @endsection
 
+<style>
+    bg {
+        background-image: url("{{ asset('img/svg_wave.svg') }}");
+opacity: 0.9;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+    }
+</style>
