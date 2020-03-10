@@ -28,7 +28,6 @@
                 @if ($user->userid == '141218912934166528') <span class="tag is-danger"><i class="fas fa-file-code"></i>&nbsp;Project Manager</span> @endif
                 <br />
               </p>
-
                     <p><strong><i class="fas fa-info-circle"></i>&nbsp;Description:&nbsp;</strong> {{ $user->description }}</p>
                     <p><strong><i class="fas fa-envelope-square"></i>&nbsp;Email:&nbsp;</strong> {{ $user->email }}</p>
                     <p><strong><i class="far fa-calendar-times"></i>&nbsp;Date of Birth:&nbsp;</strong> {{ $user->dob }}</p>

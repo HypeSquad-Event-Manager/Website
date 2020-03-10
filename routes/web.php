@@ -40,6 +40,8 @@ Route::prefix('bio')->group(function () {
     Route::post('/edit', 'BioController@postBio', function(App\User $user, $edit = App\User) {} );
 });
 
+Route::get('changelog', 'HomeController@changelog')->name('changelog');
+
 Route::get('/success', 'HomeController@success')->name('success');
 
 Route::get('/error', 'HomeController@error')->name('error');
