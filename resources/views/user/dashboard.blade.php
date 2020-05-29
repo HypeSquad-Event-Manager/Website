@@ -30,47 +30,6 @@
               @endforeach
             </div>
         </div>
-            {{-- <nav class="level">
-                <div class="level-left">
-                    <div class="container">
-                        <div class="card">
-                            <div class="card-content">
-                                <p class="title">
-                                    Upcoming events
-                                </p>
-                                <div class="table-container">
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th>Title</th>
-                                            <th>Date</th>
-                                            <th>Location</th>
-                                            <th>Created By</th>
-                                            <th>RSVP</th>
-                                        </tr>
-                                        @foreach (Events::all() as $event)
-                                        <tr>
-                                        <td>{{ $event->title }}</td>
-                                        <td>{{ $event->date }}</td>
-                                        <td>{{ $event->address }}</td>
-                                        <td>{{ $event->creator }}</td>
-                                        <td><div class="select">
-                                            <select>
-                                              <option>No</option>
-                                              <option>Yes</option>
-                                            </select>
-                                          </div></td>
-                                        </tr>
-                                             @endforeach
-
-                                        </thead>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav> --}}
         <img style="bottom: -20px;position: absolute; " src="{{ asset('img/svg_wave.svg') }}" alt="">
 
     </section>
