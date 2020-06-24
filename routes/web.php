@@ -57,3 +57,7 @@ Route::prefix('rsvp')->group( function () {
     Route::get('accept', 'HomeController@rsvp')->name('rsvp');
     Route::post('accept', 'HomeController@user_events');
 });
+
+Route::prefix('tickets')->group( function () {
+    Route::get('/', 'TicketController@index');
+});
