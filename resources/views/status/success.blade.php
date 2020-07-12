@@ -21,7 +21,9 @@ use App\Events;
                         <p class="subtitle" style="padding: 10px;">Event created with ID: {{ $eventID }}!</p>
                         <div class="content">
                             <br />
-                            <button class="button is-large is-primary is-outlined">More Info</button>
+                            <a href="{{ route('my_new_event', ['eventID' => $eventID]) }}">
+                            <button class="button is-large is-primary is-outlined">View Your Event</button>
+                            </a>
                         </div>
                     </div>
                 </div>

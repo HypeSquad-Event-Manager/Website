@@ -27,6 +27,7 @@ Route::get('/map', 'HomeController@map')->name('map');
 
 Route::prefix('events')->group(function () {
     Route::get('/dashboard', 'DashboardController@events')->name('event_dashboard');
+    Route::get('/view/{eventID}', 'DashboardController@view')->name('my_new_event');
 });
 
 Route::prefix('organize')->group(function () {

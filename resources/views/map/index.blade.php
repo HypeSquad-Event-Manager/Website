@@ -12,6 +12,7 @@
     <section class="hero is-medium is-primary">
         <div class="hero-head">@include ('layouts.nav')</div>
             <div id="map"></div>
+
     </section>
   <script>
 
@@ -32,7 +33,7 @@ L.tileLayer(
 @foreach (Events::all() as $event)
 var marker = L.marker([{{ $event->lat }}, {{ $event->lon }}]).addTo(map);
 
-marker.bindPopup("<b>{{ $event->title }} (#{{ $event->id }})</b><br>Event date: {{ $event->date }}<br /><br />{{ $event->address }}", {autoClose: false})
+marker.bindPopup("<b>{{ $event->title }} (#{{ $event->id }})</b><br>Event date: {{ $event->date }}<br /><br />{{ $event->address }} <br /><br />Event ID: {{ $event->eventID }}", {autoClose: false})
 @endforeach
   </script>
 

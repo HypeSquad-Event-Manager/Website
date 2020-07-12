@@ -22,7 +22,9 @@ use App\Events;
             </div>
             <div class="field is-grouped">
                 <div class="control is-expanded">
+
                     <div id="map"></div>
+
 <script>
 
 var center = [0, 0];
@@ -84,7 +86,6 @@ map.on('click', function(e) {
 
         </form>
 
-</section>
 
 @endsection
 
