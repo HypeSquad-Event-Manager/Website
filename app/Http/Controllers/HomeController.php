@@ -5,9 +5,18 @@ use Illuminate\Http\Request;
 use App\Events;
 use app\User_events;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\View;
 
 class HomeController extends Controller
 {
+    function randstr ($len=10, $abc="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ0123456789") {
+        $letters = str_split($abc);
+        $str = "";
+        for ($i=0; $i<=$len; $i++) {
+            $str .= $letters[rand(0, count($letters)-1)];
+        };
+        return $str;
+    }
     /**
      * Create a new controller instance.
      *
@@ -33,7 +42,7 @@ class HomeController extends Controller
 
     public function map() { return view('map.index'); }
 
-    public function success() { return view('status.success'); }
+    public function success($eventID) { return view('status.success'); }
 
     public function error() { return view('status.error'); }
 
@@ -68,7 +77,8 @@ class HomeController extends Controller
             'lat' => 'nullable',
             'lon' => 'nullable',
             'address' => 'nullable',
-            'creator' => 'nullable'
+            'creator' => 'nullable',
+            'eventID' => 'nullable'
         ]);
 
         $gl = Events::create([
@@ -77,9 +87,10 @@ class HomeController extends Controller
             'lat' => $request->lat,
             'lon' => $request->lon,
             'address' => $request->address,
-            'creator' => Auth::user()->username
+            'creator' => Auth::user()->username,
+            'eventID' => $uuid = $this->randstr(6)
         ]);
-        return redirect("/success");
+        return View("status.success")->with('eventID',$uuid);
     }
 
 

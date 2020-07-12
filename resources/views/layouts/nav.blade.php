@@ -13,7 +13,7 @@
             </a>
         </div>
         <div id="events" class="navbar-menu">
-            <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a>
+            <a class="navbar-item" href="{{ route('event_dashboard') }}">Dashboard</a>
             {{-- @auth
             @if (roleCheck()) --}}
             <a class="navbar-item" href="{{ route('new_event') }}">Event Manager</a>

@@ -9,6 +9,4 @@ class GuestController extends Controller
     public function index() { return view('home.index'); }
 
     public function info() { return view('home.info'); }
-
-    public function dashboard() { return view('user.dashboard'); }
 }

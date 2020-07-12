@@ -23,7 +23,11 @@ Route::prefix('auth')->group(function () {
 
 Route::get('/map', 'HomeController@map')->name('map');
 
-Route::get('/dashboard', 'GuestController@dashboard')->name('dashboard');
+//Route::get('/events', 'GuestController@dashboard')->name('dashboard');
+
+Route::prefix('events')->group(function () {
+    Route::get('/dashboard', 'DashboardController@events')->name('event_dashboard');
+});
 
 Route::prefix('organize')->group(function () {
    Route::prefix('new')->group(function () {
@@ -40,7 +44,7 @@ Route::prefix('bio')->group(function () {
     Route::post('/edit', 'BioController@postBio', function(App\User $user, $edit = App\User) {} );
 });
 
-Route::get('/success', 'HomeController@success')->name('success');
+Route::get('/success', 'HomeController@success')->name('create_success');
 
 Route::get('/error', 'HomeController@error')->name('error');
 

@@ -12,13 +12,13 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/egulias/email-validator" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/facade/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/facade/ignition-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/filp/whoops" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fzaninotto/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzle/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
@@ -29,6 +29,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/socialite" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/ui" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth1-client" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mockery/mockery" />
@@ -53,6 +54,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-token-stream" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-client" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
@@ -79,6 +81,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/debug" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/error-handler" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/finder" />
@@ -91,6 +94,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php72" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php80" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/service-contracts" />
@@ -101,6 +105,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/webpatser/laravel-uuid" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
